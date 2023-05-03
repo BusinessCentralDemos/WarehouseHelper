@@ -1,0 +1,31 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
+    "CdpRevision": {
+      "BaseUrl": "/v3",
+      "LastChangedTimeString": "2023-03-17T21:39:52.4860000Z",
+      "RevisionNumber": 3
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "addressLine1": "Address Line 1",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "code": "Code",
+      "contact": "Contact",
+      "country": "Country/Region Code",
+      "displayName": "Name",
+      "email": "Email",
+      "id": "Id",
+      "phoneNumber": "Phone No.",
+      "postalCode": "ZIP Code",
+      "state": "State",
+      "website": "Website"
+    },
+    "DatasetName": "Sandbox,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "locations (v2.0)",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
