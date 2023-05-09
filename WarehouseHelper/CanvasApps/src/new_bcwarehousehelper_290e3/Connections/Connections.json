@@ -13,7 +13,7 @@
           "value": "c84ed00d-d4e4-ed11-a7c6-000d3a991110"
         },
         "workflowName": {
-          "value": "f84e883c-cb55-49f1-adea-d24602cb85a4"
+          "value": "1d2b52f1-9e00-49ea-959f-e395bec6a423"
         }
       },
       "parameterHintsV2": {
@@ -24,7 +24,7 @@
           "value": "c84ed00d-d4e4-ed11-a7c6-000d3a991110"
         },
         "workflowName": {
-          "value": "f84e883c-cb55-49f1-adea-d24602cb85a4"
+          "value": "1d2b52f1-9e00-49ea-959f-e395bec6a423"
         }
       }
     },
@@ -48,32 +48,32 @@
       "parameterHintsV2": {}
     },
     "datasets": {
-      "Sandbox,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
+      "PowerApps,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
         "dataSources": {
-          "itemsWithImage (microsoft/powerApps/beta)": {
-            "tableName": "itemsWithImage,microsoft%252FpowerApps%252Fbeta"
-          },
-          "localizationInformations (microsoft/powerApps/beta)": {
-            "tableName": "localizationInformations,microsoft%252FpowerApps%252Fbeta"
-          },
           "locations (v2.0)": {
             "tableName": "locations,v2.0"
           },
-          "warehousehelperlanguageresources (microsoft/powerApps/beta)": {
-            "tableName": "warehousehelperlanguageresources,microsoft%252FpowerApps%252Fbeta"
+          "warehouseItemsWithImage (microsoft/powerApps/beta)": {
+            "tableName": "warehouseItemsWithImage,microsoft%252FpowerApps%252Fbeta"
           },
           "warehouses (microsoft/powerApps/beta)": {
             "tableName": "warehouses,microsoft%252FpowerApps%252Fbeta"
+          },
+          "whLanguageResources (microsoft/powerApps/beta)": {
+            "tableName": "whLanguageResources,microsoft%252FpowerApps%252Fbeta"
+          },
+          "whLocaleInformations (microsoft/powerApps/beta)": {
+            "tableName": "whLocaleInformations,microsoft%252FpowerApps%252Fbeta"
           }
         }
       }
     },
     "dataSources": [
-      "itemsWithImage (microsoft/powerApps/beta)",
       "locations (v2.0)",
-      "localizationInformations (microsoft/powerApps/beta)",
-      "warehousehelperlanguageresources (microsoft/powerApps/beta)",
-      "warehouses (microsoft/powerApps/beta)"
+      "warehouseItemsWithImage (microsoft/powerApps/beta)",
+      "warehouses (microsoft/powerApps/beta)",
+      "whLanguageResources (microsoft/powerApps/beta)",
+      "whLocaleInformations (microsoft/powerApps/beta)"
     ],
     "dependencies": {},
     "dependents": [
