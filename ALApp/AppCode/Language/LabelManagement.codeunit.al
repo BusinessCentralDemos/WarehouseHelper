@@ -1,6 +1,6 @@
 codeunit 69012 WH_LabelManagement
 {
-    // Codeunit for generating the static values that the Take Order app use for titles or other
+    // Codeunit for generating the static values that the Warehouse helper app use for titles or other
     // text labels. This approach lets reports get values translated for the user's locale rather than hardcoding English.
     trigger OnRun()
     begin
