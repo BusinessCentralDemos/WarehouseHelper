@@ -155,42 +155,42 @@
             =// Load Data
             Concurrent(
                 Set(varWarehouses, Filter(ShowColumns('warehouses (microsoft/powerApps/beta)',"id", "code", "displayName", "useAsInTransit", "city"), useAsInTransit = false)),
-                Set(varCompanyInformation, First('localizationInformations (microsoft/powerApps/beta)'));
+                Set(varCompanyInformation, First('whLocaleInformations (microsoft/powerApps/beta)'));
             );
             Set(varSelectedWarehouse, First(varWarehouses));
             
             // Get localized labels from Bc
             // TODO: AL logic to parse language parameter fails
-            Set(varLanguageResources, 'warehousehelperlanguageresources (microsoft/powerApps/beta)');
+            Set(varLanguageResources, Filter('whLanguageResources (microsoft/powerApps/beta)', languageCode = "en-us"));
             Set(varLabels, {
-                LoadingScreen_placeholder: LookUp(varLanguageResources, labelId = "LoadingScreen_placeholder").displayName,
-                StartScreen_Scan: LookUp(varLanguageResources, labelId = "StartScreen_Scan").displayName,
-                StartScreen_InfoPage: LookUp(varLanguageResources, labelId = "StartScreen_InfoPage").displayName,
-                StartScreen_User: LookUp(varLanguageResources, labelId = "StartScreen_User").displayName,
-                Close: LookUp(varLanguageResources, labelId = "Close").displayName,
-                Back: LookUp(varLanguageResources, labelId = "Back").displayName,
-                InfoScreen_Title: LookUp(varLanguageResources, labelId = "InfoScreen_Title").displayName,
-                InfoScreen_Text: LookUp(varLanguageResources, labelId = "InfoScreen_Text").displayName,
-                InfoScreen_ReadMore: LookUp(varLanguageResources, labelId = "InfoScreen_ReadMore").displayName, 
-                InfoScreen_LinkToolTip: LookUp(varLanguageResources, labelId = "InfoScreen_LinkToolTip").displayName,
-                InfoScreen_Link: LookUp(varLanguageResources, labelId = "InfoScreen_Link").displayName,    
-                ItemScreen_Submit: LookUp(varLanguageResources, labelId = "ItemScreen_Submit").displayName,
-                ItemScreen_Add: LookUp(varLanguageResources, labelId = "ItemScreen_Add").displayName,
-                ItemScreen_SubStract: LookUp(varLanguageResources, labelId = "ItemScreen_SubStract").displayName,
-                ItemScreen_SubStractBlocked: LookUp(varLanguageResources, labelId = "ItemScreen_SubStractBlocked").displayName,
-                ItemScreen_InventoryToolTip: LookUp(varLanguageResources, labelId = "ItemScreen_InventoryToolTip").displayName,    
-                SelectWarehouseScreen_Title: LookUp(varLanguageResources, labelId = "SelectWarehouseScreen_Title").displayName,    
-                SelectWarehouseScreen_GalleryToolTip: LookUp(varLanguageResources, labelId = "SelectWarehouseScreen_GalleryToolTip").displayName,    
-                SelectWarehouseScreen_GallerySelect: LookUp(varLanguageResources, labelId = "SelectWarehouseScreen_GallerySelect").displayName,    
-                NotFoundScreen_Title: LookUp(varLanguageResources, labelId = "NotFoundScreen_Title").displayName,
-                NotFoundScreen_Text: LookUp(varLanguageResources, labelId = "NotFoundScreen_Text").displayName,
-                NotFoundScreen_Scan: LookUp(varLanguageResources, labelId = "NotFoundScreen_Scan").displayName,
-                DebugScreen_Title: LookUp(varLanguageResources, labelId = "DebugScreen_Title").displayName,
-                DebugScreen_LearnMore: LookUp(varLanguageResources, labelId = "DebugScreen_LearnMore").displayName, 
-                DebugScreen_Gallery: LookUp(varLanguageResources, labelId = "DebugScreen_Gallery").displayName, 
-                DebugScreen_DismissInfoMessage: LookUp(varLanguageResources, labelId = "DebugScreen_DismissInfoMessage").displayName, 
-                DebugScreen_GallerySelect: LookUp(varLanguageResources, labelId = "DebugScreen_GallerySelect").displayName,     
-                DebugScreen_Message: LookUp(varLanguageResources, labelId = "DebugScreen_Message").displayName    
+                LoadingScreen_placeholder: LookUp(varLanguageResources, labelId = "LoadingScreen_placeholder").DisplayName,
+                StartScreen_Scan: LookUp(varLanguageResources, labelId = "StartScreen_Scan").DisplayName,
+                StartScreen_InfoPage: LookUp(varLanguageResources, labelId = "StartScreen_InfoPage").DisplayName,
+                StartScreen_User: LookUp(varLanguageResources, labelId = "StartScreen_User").DisplayName,
+                Close: LookUp(varLanguageResources, labelId = "Close").DisplayName,
+                Back: LookUp(varLanguageResources, labelId = "Back").DisplayName,
+                InfoScreen_Title: LookUp(varLanguageResources, labelId = "InfoScreen_Title").DisplayName,
+                InfoScreen_Text: LookUp(varLanguageResources, labelId = "InfoScreen_Text").DisplayName,
+                InfoScreen_ReadMore: LookUp(varLanguageResources, labelId = "InfoScreen_ReadMore").DisplayName, 
+                InfoScreen_LinkToolTip: LookUp(varLanguageResources, labelId = "InfoScreen_LinkToolTip").DisplayName,
+                InfoScreen_Link: LookUp(varLanguageResources, labelId = "InfoScreen_Link").DisplayName,    
+                ItemScreen_Submit: LookUp(varLanguageResources, labelId = "ItemScreen_Submit").DisplayName,
+                ItemScreen_Add: LookUp(varLanguageResources, labelId = "ItemScreen_Add").DisplayName,
+                ItemScreen_SubStract: LookUp(varLanguageResources, labelId = "ItemScreen_SubStract").DisplayName,
+                ItemScreen_SubStractBlocked: LookUp(varLanguageResources, labelId = "ItemScreen_SubStractBlocked").DisplayName,
+                ItemScreen_InventoryToolTip: LookUp(varLanguageResources, labelId = "ItemScreen_InventoryToolTip").DisplayName,    
+                SelectWarehouseScreen_Title: LookUp(varLanguageResources, labelId = "SelectWarehouseScreen_Title").DisplayName,    
+                SelectWarehouseScreen_GalleryToolTip: LookUp(varLanguageResources, labelId = "SelectWarehouseScreen_GalleryToolTip").DisplayName,    
+                SelectWarehouseScreen_GallerySelect: LookUp(varLanguageResources, labelId = "SelectWarehouseScreen_GallerySelect").DisplayName,    
+                NotFoundScreen_Title: LookUp(varLanguageResources, labelId = "NotFoundScreen_Title").DisplayName,
+                NotFoundScreen_Text: LookUp(varLanguageResources, labelId = "NotFoundScreen_Text").DisplayName,
+                NotFoundScreen_Scan: LookUp(varLanguageResources, labelId = "NotFoundScreen_Scan").DisplayName,
+                DebugScreen_Title: LookUp(varLanguageResources, labelId = "DebugScreen_Title").DisplayName,
+                DebugScreen_LearnMore: LookUp(varLanguageResources, labelId = "DebugScreen_LearnMore").DisplayName, 
+                DebugScreen_Gallery: LookUp(varLanguageResources, labelId = "DebugScreen_Gallery").DisplayName, 
+                DebugScreen_DismissInfoMessage: LookUp(varLanguageResources, labelId = "DebugScreen_DismissInfoMessage").DisplayName, 
+                DebugScreen_GallerySelect: LookUp(varLanguageResources, labelId = "DebugScreen_GallerySelect").DisplayName,     
+                DebugScreen_Message: LookUp(varLanguageResources, labelId = "DebugScreen_Message").DisplayName    
             });
             
             // Load app state from local storage

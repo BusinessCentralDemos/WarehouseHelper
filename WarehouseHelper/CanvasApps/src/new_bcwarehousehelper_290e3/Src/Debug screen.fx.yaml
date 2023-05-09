@@ -3,14 +3,13 @@
     Button1 As button:
         Height: =70
         OnSelect: |-
-            =IfError(Set(varSelectedWarehouse, LookUp(varWarehouses, id = GUID("00000000-0000-0000-0000-000000000000"))),
-                Notify("Error");
-            );
+            =Set(varTest, 'warehouseItemsWithImage (microsoft/powerApps/beta)');
+            Set(varTestFirst, First(varTest))
         Size: =24
         Text: ="Button"
         Width: =280
-        X: =150
-        Y: =1066
+        X: =210
+        Y: =561
         ZIndex: =1
 
     htmlItemDetailsImageShadow_1 As htmlViewer:

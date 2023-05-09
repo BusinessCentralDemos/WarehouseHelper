@@ -41,7 +41,7 @@
             Set(varScannedCode, Self.Value);
             
             If(Len(varScannedCode) <= 14,
-                IfError(Set(varScannedItem, LookUp('itemsWithImage (microsoft/powerApps/beta)', GTIN = varScannedCode )), 
+                IfError(Set(varScannedItem, LookUp('warehouseItemsWithImage (microsoft/powerApps/beta)', GTIN = varScannedCode )), 
                     UpdateContext({ctxErrorOnItemLookup: true});
                     Trace("Error trying to lookup item: "& varScannedCode, NotificationType.Error, FirstError);
                 )
@@ -149,16 +149,16 @@
                 BorderColor: =RGBA(149, 149, 149, 1)
                 Height: =400
                 Image: |-
-                    =If(varScannedItem.'Picture reference' = GUID("00000000-0000-0000-0000-000000000000"),
+                    =If(varScannedItem.itemImageText = GUID("00000000-0000-0000-0000-000000000000"),
                         placeholder
                         ,
-                        varScannedItem.Picture  
+                        varScannedItem.picture  
                     )
                 Visible: =Not(ctxShowLoadingScreen)
                 Width: |-
                     =With({
-                        height: If(varScannedItem.'Picture Height' > 0, varScannedItem.'Picture Height', 1),
-                        width: If(varScannedItem.'Picture Width' > 0, varScannedItem.'Picture Width', 1)
+                        height: If(varScannedItem.pictureHeight > 0, varScannedItem.pictureHeight, 1),
+                        width: If(varScannedItem.pictureWidth > 0, varScannedItem.pictureWidth, 1)
                     },
                         Self.Height * (width/height)
                     )
@@ -193,7 +193,7 @@
                 Align: =Align.Center
                 Font: =varTheme.font
                 Size: =17
-                Text: =varScannedItem.baseUnitOfMeasureCode & "   |   " & varScannedItem.Number
+                Text: =varScannedItem.baseUnitOfMeasureCode & "   |   " & varScannedItem.number
                 Visible: =Not(ctxShowLoadingScreen)
                 Width: =300
                 X: =Parent.Width/2 - Self.Width/2
@@ -303,7 +303,7 @@
             OnSelect: |
                 =UpdateContext({ctxShowLoadingScreen: true, ctxShouldShowError: false});
                 
-                IfError(UpdateItemInventoryForLocation.Run(varScannedItem.'System ID', ctxInventory, varSelectedWarehouse.code),
+                IfError(UpdateItemInventoryForLocation.Run(varScannedItem.id, ctxInventory, varSelectedWarehouse.code),
                     // Parse error message
                     UpdateContext({ctxShouldShowError: true, ctxErrorMessage: FirstError.Message});
                     Trace("Inventory update failed for " &varScannedItem.DisplayName, NotificationType.Error, FirstError);    
