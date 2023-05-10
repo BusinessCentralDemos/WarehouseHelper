@@ -9,7 +9,12 @@ page 69010 WH_SamplePage
     {
         area(Content)
         {
-
+            part(itempart; WH_ItemListPart)
+            {
+                ApplicationArea = All;
+                Editable = false;
+                Caption = 'Items with GTIN numbers';
+            }
         }
     }
 
@@ -28,6 +33,15 @@ page 69010 WH_SamplePage
                 begin
                     sampleDataGenerator.GenerateDemoDataForPowerApps();
                 end;
+            }
+
+            action(OpenItemList)
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                Caption = 'Items';
+                Image = Item;
+                RunObject = page "item list";
             }
         }
     }
