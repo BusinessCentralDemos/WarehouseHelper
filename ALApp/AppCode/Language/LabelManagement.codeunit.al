@@ -1,4 +1,4 @@
-codeunit 69012 WH_LabelManagement
+codeunit 70022 "WH - LabelManagement"
 {
     // Codeunit for generating the static values that the Warehouse helper app use for titles or other
     // text labels. This approach lets reports get values translated for the user's locale rather than hardcoding English.
@@ -91,7 +91,7 @@ codeunit 69012 WH_LabelManagement
         DebugScreen_DismissInfoMessage: Label 'DebugScreen_DismissInfoMessage', Locked = true;
         DebugScreen_DismissInfoMessage_ValueTxt: Label 'Click to dismiss this message';
 
-    procedure GetLabelsForLanguage(var TempPowerAppsLabels: Record WH_Labels temporary; LanguageFilter: Text)
+    procedure GetLabelsForLanguage(var TempPowerAppsLabels: Record "WH - Labels" temporary; LanguageFilter: Text)
     var
         PreviousLanguage: Integer;
         LanguageCodeId: Integer;
@@ -123,7 +123,7 @@ codeunit 69012 WH_LabelManagement
         end;
     end;
 
-    procedure GetReportLabels(var TempPowerAppsLabels: Record WH_Labels temporary; var languageFilter: Text[10])
+    procedure GetReportLabels(var TempPowerAppsLabels: Record "WH - Labels" temporary; var languageFilter: Text[10])
     begin
         InsertLabel(TempPowerAppsLabels, LoadingScreen_placeholder, LoadingScreen_placeholder_ValueTxt, languageFilter);
         InsertLabel(TempPowerAppsLabels, StartScreen_Scan, StartScreen_Scan_ValueTxt, languageFilter);
@@ -156,7 +156,7 @@ codeunit 69012 WH_LabelManagement
 
     end;
 
-    local procedure InsertLabel(var TempPowerAppsLabels: Record WH_Labels temporary; LabelName: Text[100]; LabelText: Text[250]; LabelLanguage: Text[10])
+    local procedure InsertLabel(var TempPowerAppsLabels: Record "WH - Labels" temporary; LabelName: Text[100]; LabelText: Text[250]; LabelLanguage: Text[10])
     begin
         // Inserts the given key-value pair into the temp table.
         TempPowerAppsLabels."Label ID" := LabelName;

@@ -1,4 +1,4 @@
-page 69015 WH_ItemListPart
+page 70025 "WH - ItemListPart"
 {
     PageType = ListPart;
     SourceTable = Item;

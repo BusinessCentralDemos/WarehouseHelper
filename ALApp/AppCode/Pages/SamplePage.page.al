@@ -1,4 +1,4 @@
-page 69010 WH_SamplePage
+page 70020 "WH - SamplePage"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -9,7 +9,11 @@ page 69010 WH_SamplePage
     {
         area(Content)
         {
-            part(itempart; WH_ItemListPart)
+            label(Processing)
+            {
+                Caption = 'This is a sample page to generate data for the Warehouse Helper PowerApp';
+            }
+            part(itempart; "WH - ItemListPart")
             {
                 ApplicationArea = All;
                 Editable = false;
@@ -20,28 +24,25 @@ page 69010 WH_SamplePage
 
     actions
     {
+        area(Promoted)
+        {
+            actionref(PromotedGenerateTestData; GenerateTestData)
+            {
+
+            }
+        }
         area(Processing)
         {
             action(GenerateTestData)
             {
                 ApplicationArea = All;
-                Promoted = true;
                 Caption = 'Update Items with GTIN numbers';
                 trigger OnAction()
                 var
-                    sampleDataGenerator: Codeunit WH_SampleDataGenerator;
+                    sampleDataGenerator: Codeunit "WH - SampleDataGenerator";
                 begin
                     sampleDataGenerator.GenerateDemoDataForPowerApps();
                 end;
-            }
-
-            action(OpenItemList)
-            {
-                ApplicationArea = All;
-                Promoted = true;
-                Caption = 'Items';
-                Image = Item;
-                RunObject = page "item list";
             }
         }
     }

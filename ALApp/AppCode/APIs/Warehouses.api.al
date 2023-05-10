@@ -1,10 +1,10 @@
-page 69013 WH_Warehouses
+page 70023 "WH - Warehouses"
 {
     PageType = API;
     Caption = 'Warehouses';
 
-    APIPublisher = 'microsoft';
-    APIGroup = 'powerApps';
+    APIPublisher = 'businessCentralDemos';
+    APIGroup = 'warehouseHelper';
     APIVersion = 'beta';
 
     EntityName = 'warehouse';

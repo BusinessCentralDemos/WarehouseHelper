@@ -1,4 +1,4 @@
-codeunit 69011 WH_SampleDataGenerator
+codeunit 70021 "WH - SampleDataGenerator"
 {
     procedure GenerateDemoDataForPowerApps()
     begin
