@@ -1,4 +1,4 @@
-table 69010 WH_Labels
+table 70020 "WH - Labels"
 {
     Caption = 'Warehouse helper - Labels';
     DataClassification = SystemMetadata;
@@ -30,9 +30,5 @@ table 69010 WH_Labels
         {
             Clustered = true;
         }
-    }
-
-    fieldgroups
-    {
     }
 }

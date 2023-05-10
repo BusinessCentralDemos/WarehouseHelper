@@ -7,7 +7,7 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "PowerApps",
-            "startupObjectId": 69010,
+            "startupObjectId": 70020,
             "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": false,

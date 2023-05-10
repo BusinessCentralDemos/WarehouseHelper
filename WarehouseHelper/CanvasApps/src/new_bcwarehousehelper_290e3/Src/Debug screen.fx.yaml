@@ -3,8 +3,8 @@
     Button1 As button:
         Height: =70
         OnSelect: |-
-            =Set(varTest, 'warehouseItemsWithImage (microsoft/powerApps/beta)');
-            Set(varTestFirst, First(varTest))
+            =Set(varWarehouses, 'warehouses (businessCentralDemos/warehouseHelper/beta)');
+            Set(varTestFirst, First(varWarehouses))
         Size: =24
         Text: ="Button"
         Width: =280

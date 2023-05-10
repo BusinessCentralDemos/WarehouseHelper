@@ -1,12 +1,12 @@
-page 69017 WH_LocaleInformation
+page 70027 "WH - LocaleInformation"
 {
     PageType = API;
     Caption = 'Business Central Localization information for PowerApps';
-    EntityName = 'WHLocaleInformation';
-    EntitySetName = 'WHLocaleInformations';
+    EntityName = 'LocaleInformation';
+    EntitySetName = 'LocaleInformation';
 
-    APIPublisher = 'microsoft';
-    APIGroup = 'powerApps';
+    APIPublisher = 'businessCentralDemos';
+    APIGroup = 'warehouseHelper';
     APIVersion = 'beta';
 
     SourceTable = "Company Information";

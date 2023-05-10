@@ -1,16 +1,16 @@
-page 69014 WH_LanguageResources
+page 70024 "WH - LanguageResources"
 {
     PageType = API;
     Caption = 'Warehouse Helper Language Resources';
-    EntityName = 'WHLanguageResource';
-    EntitySetName = 'WHLanguageResources';
-    APIPublisher = 'microsoft';
-    APIGroup = 'powerApps';
+    EntityName = 'LanguageResource';
+    EntitySetName = 'LanguageResources';
+    APIPublisher = 'businessCentralDemos';
+    APIGroup = 'warehouseHelper';
     APIVersion = 'beta';
 
     InsertAllowed = false;
     ModifyAllowed = false;
-    SourceTable = WH_Labels;
+    SourceTable = "WH - Labels";
     SourceTableTemporary = true;
     Extensible = false;
     ODataKeyFields = "Label ID";
@@ -39,7 +39,7 @@ page 69014 WH_LanguageResources
 
     trigger OnOpenPage()
     var
-        LabelManagement: Codeunit WH_LabelManagement;
+        LabelManagement: Codeunit "WH - LabelManagement";
         LanguageFilter: Text;
     begin
         LanguageFilter := Rec.GetFilter("Language Code");

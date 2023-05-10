@@ -1,12 +1,12 @@
-page 69011 WH_WarehouseItemWithImage
+page 70021 "WH - WarehouseItemWithImage"
 {
     PageType = API;
     Caption = 'Warehouse Item with image';
     EntityName = 'WarehouseItemWithImage';
     EntitySetName = 'WarehouseItemsWithImage';
 
-    APIPublisher = 'microsoft';
-    APIGroup = 'powerApps';
+    APIPublisher = 'businessCentralDemos';
+    APIGroup = 'warehouseHelper';
     APIVersion = 'beta';
 
     SourceTable = "Item";
