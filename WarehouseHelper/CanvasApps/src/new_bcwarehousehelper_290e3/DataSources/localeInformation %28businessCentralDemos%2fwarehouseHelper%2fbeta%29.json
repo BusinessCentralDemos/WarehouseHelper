@@ -16,7 +16,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "whLocaleInformations (microsoft/powerApps/beta)",
+    "Name": "localeInformation (businessCentralDemos/warehouseHelper/beta)",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

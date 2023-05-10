@@ -154,14 +154,15 @@
         OnSelect: |-
             =// Load Data
             Concurrent(
-                Set(varWarehouses, Filter(ShowColumns('warehouses (microsoft/powerApps/beta)',"id", "code", "displayName", "useAsInTransit", "city"), useAsInTransit = false)),
-                Set(varCompanyInformation, First('whLocaleInformations (microsoft/powerApps/beta)'));
+                Set(varWarehouses, Filter(ShowColumns('warehouses (businessCentralDemos/warehouseHelper/beta)',"id", "code", "displayName", "useAsInTransit", "city"), useAsInTransit = false)),
+                Set(varCompanyInformation, First('localeInformation (businessCentralDemos/warehouseHelper/beta)'));
             );
+            
             Set(varSelectedWarehouse, First(varWarehouses));
             
             // Get localized labels from Bc
             // TODO: AL logic to parse language parameter fails
-            Set(varLanguageResources, Filter('whLanguageResources (microsoft/powerApps/beta)', languageCode = "en-us"));
+            Set(varLanguageResources, Filter('languageResources (businessCentralDemos/warehouseHelper/beta)', languageCode = "en-us"));
             Set(varLabels, {
                 LoadingScreen_placeholder: LookUp(varLanguageResources, labelId = "LoadingScreen_placeholder").DisplayName,
                 StartScreen_Scan: LookUp(varLanguageResources, labelId = "StartScreen_Scan").DisplayName,

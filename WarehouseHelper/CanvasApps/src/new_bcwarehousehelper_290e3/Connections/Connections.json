@@ -13,7 +13,7 @@
           "value": "c84ed00d-d4e4-ed11-a7c6-000d3a991110"
         },
         "workflowName": {
-          "value": "1d2b52f1-9e00-49ea-959f-e395bec6a423"
+          "value": "9aa7e29a-195f-4cfb-b52a-5a52637d1b7b"
         }
       },
       "parameterHintsV2": {
@@ -24,7 +24,7 @@
           "value": "c84ed00d-d4e4-ed11-a7c6-000d3a991110"
         },
         "workflowName": {
-          "value": "1d2b52f1-9e00-49ea-959f-e395bec6a423"
+          "value": "9aa7e29a-195f-4cfb-b52a-5a52637d1b7b"
         }
       }
     },
@@ -50,30 +50,30 @@
     "datasets": {
       "PowerApps,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
         "dataSources": {
+          "languageResources (businessCentralDemos/warehouseHelper/beta)": {
+            "tableName": "languageResources,businessCentralDemos%252FwarehouseHelper%252Fbeta"
+          },
+          "localeInformation (businessCentralDemos/warehouseHelper/beta)": {
+            "tableName": "localeInformation,businessCentralDemos%252FwarehouseHelper%252Fbeta"
+          },
           "locations (v2.0)": {
             "tableName": "locations,v2.0"
           },
-          "warehouseItemsWithImage (microsoft/powerApps/beta)": {
-            "tableName": "warehouseItemsWithImage,microsoft%252FpowerApps%252Fbeta"
+          "warehouseItemsWithImage (businessCentralDemos/warehouseHelper/beta)": {
+            "tableName": "warehouseItemsWithImage,businessCentralDemos%252FwarehouseHelper%252Fbeta"
           },
-          "warehouses (microsoft/powerApps/beta)": {
-            "tableName": "warehouses,microsoft%252FpowerApps%252Fbeta"
-          },
-          "whLanguageResources (microsoft/powerApps/beta)": {
-            "tableName": "whLanguageResources,microsoft%252FpowerApps%252Fbeta"
-          },
-          "whLocaleInformations (microsoft/powerApps/beta)": {
-            "tableName": "whLocaleInformations,microsoft%252FpowerApps%252Fbeta"
+          "warehouses (businessCentralDemos/warehouseHelper/beta)": {
+            "tableName": "warehouses,businessCentralDemos%252FwarehouseHelper%252Fbeta"
           }
         }
       }
     },
     "dataSources": [
       "locations (v2.0)",
-      "warehouseItemsWithImage (microsoft/powerApps/beta)",
-      "warehouses (microsoft/powerApps/beta)",
-      "whLanguageResources (microsoft/powerApps/beta)",
-      "whLocaleInformations (microsoft/powerApps/beta)"
+      "languageResources (businessCentralDemos/warehouseHelper/beta)",
+      "localeInformation (businessCentralDemos/warehouseHelper/beta)",
+      "warehouseItemsWithImage (businessCentralDemos/warehouseHelper/beta)",
+      "warehouses (businessCentralDemos/warehouseHelper/beta)"
     ],
     "dependencies": {},
     "dependents": [
