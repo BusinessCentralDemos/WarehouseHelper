@@ -17,7 +17,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "warehouses (microsoft/powerApps/beta)",
+    "Name": "warehouses (businessCentralDemos/warehouseHelper/beta)",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

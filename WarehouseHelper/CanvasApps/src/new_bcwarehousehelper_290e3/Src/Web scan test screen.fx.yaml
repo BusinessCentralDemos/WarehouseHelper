@@ -77,7 +77,7 @@
         "galDebugItems As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             AccessibleLabel: =varLabels.DebugScreen_Gallery
             AlignInContainer: =AlignInContainer.SetByContainer
-            Items: =Filter('warehouseItemsWithImage (microsoft/powerApps/beta)', GTIN <> "")
+            Items: =Filter('warehouseItemsWithImage (businessCentralDemos/warehouseHelper/beta)', GTIN <> "")
             Layout: =Layout.Vertical
             LayoutMinHeight: =287
             LayoutMinWidth: =320

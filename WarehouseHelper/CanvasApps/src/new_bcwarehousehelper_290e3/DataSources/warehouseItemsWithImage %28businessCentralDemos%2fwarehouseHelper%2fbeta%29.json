@@ -24,7 +24,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "warehouseItemsWithImage (microsoft/powerApps/beta)",
+    "Name": "warehouseItemsWithImage (businessCentralDemos/warehouseHelper/beta)",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

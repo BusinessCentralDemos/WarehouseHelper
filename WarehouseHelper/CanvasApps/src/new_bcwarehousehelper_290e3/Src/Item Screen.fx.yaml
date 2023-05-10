@@ -41,7 +41,7 @@
             Set(varScannedCode, Self.Value);
             
             If(Len(varScannedCode) <= 14,
-                IfError(Set(varScannedItem, LookUp('warehouseItemsWithImage (microsoft/powerApps/beta)', GTIN = varScannedCode )), 
+                IfError(Set(varScannedItem, LookUp('warehouseItemsWithImage (businessCentralDemos/warehouseHelper/beta)', GTIN = varScannedCode )), 
                     UpdateContext({ctxErrorOnItemLookup: true});
                     Trace("Error trying to lookup item: "& varScannedCode, NotificationType.Error, FirstError);
                 )
