@@ -1110,7 +1110,14 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -1162,7 +1169,14 @@
         },
         "DisplayMode",
         "ZIndex",
-        "LineHeight",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "LineHeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderThickness",
         "FocusedBorderThickness",
         "Size",
@@ -1400,7 +1414,14 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -1459,7 +1480,14 @@
         },
         "DisplayMode",
         "ZIndex",
-        "LineHeight",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "LineHeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderThickness",
         "FocusedBorderThickness",
         {

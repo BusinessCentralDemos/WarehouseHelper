@@ -5,14 +5,14 @@
         
 
     conStartScreenContent As groupContainer.verticalAutoLayoutContainer:
-        Height: =Parent.Height - imgOpenInfoPage.Height - 40
+        Height: =Parent.Height - 100
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width * 0.9
         X: =Parent.Width/2 - Self.Width/2
-        Y: =imgOpenInfoPage.Height
+        Y: =30
         ZIndex: =22
 
         conUserName As groupContainer.manualLayoutContainer:
@@ -47,11 +47,11 @@
                 ZIndex: =2
 
         imgStartLogo As image:
-            Height: =243
+            Height: =200 
             Image: ='warehouse helper logo'
             LayoutMinHeight: =320
             LayoutMinWidth: =320
-            Width: =235
+            Width: =Self.Height
             X: =Parent.Width/2 - Self.Width/2
             Y: =80
             ZIndex: =2
@@ -168,6 +168,6 @@
         PaddingRight: =20
         PaddingTop: =20
         TabIndex: =0
-        X: =Parent.Width - Self.Width
+        X: =Parent.Width - Self.Width - 20
         ZIndex: =23
 

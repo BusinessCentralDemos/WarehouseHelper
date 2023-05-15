@@ -68,7 +68,11 @@
       },
       "actions": {
         "Run_action_(V3)": {
-          "runAfter": {},
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
           "metadata": {
             "operationMetadataId": "ade4c2a6-17e2-4cc8-beb9-e605406d233a"
           },
@@ -93,8 +97,9 @@
         },
         "Respond_to_a_PowerApp_or_flow": {
           "runAfter": {
-            "Run_action_(V3)": [
-              "Succeeded"
+            "Set_variable": [
+              "Succeeded",
+              "Skipped"
             ]
           },
           "metadata": {
@@ -105,7 +110,7 @@
           "inputs": {
             "statusCode": 200,
             "body": {
-              "success": true
+              "success": "@variables('FlowStatus_succes')"
             },
             "schema": {
               "type": "object",
@@ -117,6 +122,39 @@
                 }
               }
             }
+          }
+        },
+        "Initialize_variable": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "61d44bcc-d087-4cda-a6ac-af06ee3fbb87"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "FlowStatus_succes",
+                "type": "boolean",
+                "value": true
+              }
+            ]
+          }
+        },
+        "Set_variable": {
+          "runAfter": {
+            "Run_action_(V3)": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "93de2aa6-fd1c-44f9-baf8-22dff0cca955"
+          },
+          "type": "SetVariable",
+          "inputs": {
+            "name": "FlowStatus_succes",
+            "value": false
           }
         }
       },

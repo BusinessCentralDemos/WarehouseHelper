@@ -14,7 +14,7 @@
 
         conDebugHeader As groupContainer.manualLayoutContainer:
             FillPortions: =0
-            Height: =160
+            Height: =120
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             Y: =569
@@ -47,7 +47,7 @@
                 TabIndex: =0
                 Tooltip: =varLabels.DebugScreen_LearnMore
                 Width: =100
-                X: =Parent.Width - Self.Width - 10
+                X: =Parent.Width - Self.Width - 20
                 Y: =Parent.Height/2 - Self.Height/2
                 ZIndex: =2
 
@@ -64,7 +64,7 @@
                 TabIndex: =0
                 Tooltip: =varLabels.Back
                 Width: =100
-                X: =40
+                X: =20
                 Y: =Parent.Height/2 - Self.Height/2
                 ZIndex: =3
 
@@ -167,7 +167,7 @@
                 Width: =Parent.TemplateWidth
                 ZIndex: =4
 
-    conExplaner As groupContainer.manualLayoutContainer:
+    conExplanerDialog As groupContainer.manualLayoutContainer:
         Height: =1136
         Visible: =ctxShowExplainer
         Width: =640

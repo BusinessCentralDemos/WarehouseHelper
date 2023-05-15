@@ -5,7 +5,8 @@ App As appinfo:
         Set(varTheme, {
             font: Font.'Segoe UI',
             brandColor: ColorValue("#186CCB"),
-            secondaryColor: ColorValue("#E2F8FF")
+            secondaryColor: ColorValue("#E2F8FF"),
+            darkTextColor: RGBA(33,33,33, 1)
         });
     StartScreen: ='Loading Screen'
 
