@@ -3,15 +3,16 @@
     OnVisible: =
 
     conNotFoundContent As groupContainer.verticalAutoLayoutContainer:
-        Height: =Parent.Height
+        Height: =Parent.Height - 70 - Self.Y
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =100
-        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
         PaddingLeft: =100
         PaddingRight: =100
         Width: =Parent.Width
+        Y: =180
         ZIndex: =1
 
         imgNotFound As image:
@@ -30,7 +31,9 @@
             ZIndex: =2
 
             lblNotFoundDescription As label:
+                Color: =varTheme.darkTextColor
                 Height: =160
+                LineHeight: =1.4
                 Size: =21
                 Text: =varLabels.NotFoundScreen_Text
                 Width: =439
@@ -38,9 +41,11 @@
                 ZIndex: =1
 
             lblNotFoundTitle As label:
+                Color: =varTheme.darkTextColor
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =90
+                Height: =100
+                LineHeight: =1.4
                 Size: =28
                 Text: =varLabels.NotFoundScreen_Title
                 Width: =360
